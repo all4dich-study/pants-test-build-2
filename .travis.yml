@@ -1,3 +1,7 @@
 language: python
 script:
 - ./pants run //:test
+- wget http://apache.mirror.cdnetworks.com/aurora/0.18.0/apache-aurora-0.18.0.tar.gz
+- tar xvzf apache-aurora-0.18.0.tar.gz
+- pushd apache-aurora-0.18.0/
+- ./pants binary src/main/python/apache/aurora/tools:thermos
