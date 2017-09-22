@@ -3,7 +3,7 @@ python_library (
     sources=['ku/sunjoo/sunjoo.py'],
 )
 
-python_binary(
+python_binary (
   name="main",
   dependencies=[
 	':main-lib'
